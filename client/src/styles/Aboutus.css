@@ -1,0 +1,12 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vh;
+  height: 40vh;
+}
+
+.image-itself {
+  width: 40vh;
+  height: 40vh;
+}

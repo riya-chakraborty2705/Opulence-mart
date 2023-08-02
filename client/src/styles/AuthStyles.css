@@ -1,0 +1,74 @@
+/* ===================================
+========= register page  */
+
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  letter-spacing: -4px;
+}
+
+h2,
+h3,
+h4,
+body {
+  font-family: "Arimo", sans-serif;
+}
+
+.form-container {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  flex-direction: column;
+  background: #272829;
+  background: linear-gradient(135deg, #272829, #61677a);
+}
+
+.form-container form {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+  box-shadow: #fff6e0 -5px 5px, #fff6e0b4 -10px 10px, #d8d9da -15px 15px,
+    #61677a94 -20px 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.form-container form .title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  /* font-family: "Playfair Display", serif; */
+}
+
+.form-container form input {
+  border: none;
+  border: 1px solid #61677a;
+  border-radius: 12px;
+}
+
+.form-container form button {
+  border-radius: 12px;
+  width: 250px;
+  background: #272829;
+  border: 1px solid #fff;
+}
+
+.form-container form button:hover {
+  border: 1px solid #272829;
+  color: black;
+  background-color: #fff;
+}
+
+.forgot-btn {
+  border: 1px solid #272829;
+  color: white;
+  background-color: #fff;
+}
+
+.forgot-btn:hover {
+  background: #272829;
+  border: 1px solid #fff;
+}

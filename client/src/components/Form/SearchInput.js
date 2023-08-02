@@ -26,6 +26,10 @@ const SearchInput = () => {
         onSubmit={handleSubmit}
       >
         <input
+          style={{
+            borderRadius: "12px",
+            border: "1px solid #272829",
+          }}
           className="form-control me-2"
           type="search"
           placeholder="Search"
@@ -33,7 +37,15 @@ const SearchInput = () => {
           value={values.keyword}
           onChange={(e) => setValues({ ...values, keyword: e.target.value })}
         />
-        <button className="btn btn-outline-success" type="submit">
+        <button
+          className="btn btn-outline-success"
+          type="submit"
+          style={{
+            borderRadius: "12px",
+            background: "#272829",
+            border: " 1px solid #fff",
+          }}
+        >
           Search
         </button>
       </form>

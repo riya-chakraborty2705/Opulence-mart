@@ -8,6 +8,7 @@ import { AiFillWarning } from "react-icons/ai";
 import axios from "axios";
 import toast from "react-hot-toast";
 import "../styles/CartStyles.css";
+import ProductCard from "../components/ProductCard";
 
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
@@ -88,8 +89,9 @@ const CartPage = () => {
                 : `Hello  ${auth?.token && auth?.user?.name}`}
               <p className="text-center">
                 {cart?.length
-                  ? `You Have ${cart.length} items in your cart ${auth?.token ? "" : "please login to checkout !"
-                  }`
+                  ? `You Have ${cart.length} items in your cart ${
+                      auth?.token ? "" : "please login to checkout !"
+                    }`
                   : " Your Cart Is Empty"}
               </p>
             </h1>
@@ -99,30 +101,38 @@ const CartPage = () => {
           <div className="row ">
             <div className="col-md-7  p-0 m-0">
               {cart?.map((p) => (
-                <div className="row card flex-row" key={p._id}>
-                  <div className="col-md-4">
-                    <img
-                      src={`/api/v1/product/product-photo/${p._id}`}
-                      className="card-img-top"
-                      alt={p.name}
-                      width="100%"
-                      height={"130px"}
-                    />
-                  </div>
-                  <div className="col-md-4">
-                    <p>{p.name}</p>
-                    <p>{p.description.substring(0, 30)}</p>
-                    <p>Price : {p.price}</p>
-                  </div>
-                  <div className="col-md-4 cart-remove-btn">
-                    <button
-                      className="btn btn-danger"
-                      onClick={() => removeCartItem(p._id)}
-                    >
-                      Remove
-                    </button>
-                  </div>
-                </div>
+                <ProductCard
+                  id={p._id}
+                  name={p.name}
+                  desc={p.description.substring(0, 60)}
+                  price={p.price}
+                  slug={p.slug}
+                  handleCartClick={() => removeCartItem(p._id)}
+                />
+                // <div className="row card flex-row cart-item" key={p._id}>
+                //   <div className="col-md-4">
+                //     <img
+                //       src={`/api/v1/product/product-photo/${p._id}`}
+                //       className="card-img-top"
+                //       alt={p.name}
+                //       // width="100%"
+                //       // height={"130px"}
+                //     />
+                //   </div>
+                //   <div className="col-md-4 card-text">
+                //     <p>{p.name}</p>
+                //     <p>{p.description.substring(0, 30)}</p>
+                //     <p>Price : {p.price}</p>
+                //   </div>
+                //   <div className="col-md-4 cart-remove-btn">
+                //     <button
+                //       className="btn btn-danger"
+                //       onClick={() => removeCartItem(p._id)}
+                //     >
+                //       Remove
+                //     </button>
+                //   </div>
+                // </div>
               ))}
             </div>
             <div className="col-md-5 cart-summary ">

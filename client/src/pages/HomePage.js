@@ -121,10 +121,7 @@ const HomePage = () => {
       </div>
       {/* category filter */}
       <div className="container-fluid row mt-3 home-page">
-        <div
-          className="col-md-3 filters"
-          // style={{ border: "2px solid red" }}
-        >
+        <div className="col-md-3 filters">
           <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">
             {categories?.map((c) => (

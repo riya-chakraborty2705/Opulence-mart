@@ -1,5 +1,5 @@
 .banner-img {
-  background: #D8D9DA;
+  background: #d8d9da;
   /* background: linear-gradient(135deg, #dc1a56, #817762); */
   margin-top: 60px;
   height: 30vh;
@@ -8,9 +8,9 @@
   justify-content: center;
   align-items: center;
 }
+
 banner-img-title {
   height: 240px;
-  /* border: 2px solid red; */
 }
 
 .home-page h1 {
